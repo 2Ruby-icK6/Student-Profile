@@ -60,11 +60,6 @@ class TownCity {
             // Bind parameters
             $stmt->bindValue(':id', $data['id']);
             $stmt->bindValue(':name', $data['name']);
-            $stmt->bindValue(':first_name', $data['first_name']);
-            $stmt->bindValue(':middle_name', $data['middle_name']);
-            $stmt->bindValue(':last_name', $data['last_name']);
-            $stmt->bindValue(':gender', $data['gender']);
-            $stmt->bindValue(':birthday', $data['birthday']);
 
             // Execute the query
             $stmt->execute();
