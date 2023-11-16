@@ -1,5 +1,5 @@
 <?php
-// include_once("../db.php"); // Include the Database class file
+include_once("../db.php"); // Include the Database class file
 // include_once("../student.php"); // Include the Student class file
 // include_once("../student_details.php"); // Include the Student class file
 include_once("../town_city.php");
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Student record successfully created
         
         // Retrieve student details from the form
-        $studentDetailsData = [
+        $town_citydetails = [
             'id' => $town_id, // Use the obtained student ID
             'name' => $_POST['name'],
             // Other student details fields
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>Add Town City</h1>
     <form action="" method="post" class="centered-form">
         <label for="name">Town City:</label>
-        <input type="text" name="name" id="id" required>
+        <input type="text" name="name" id="name" required>
 
         <input type="submit" value="Add Town">
     </form>
