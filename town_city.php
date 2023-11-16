@@ -81,6 +81,8 @@ class TownCity {
             $stmt = $this->db->getConnection()->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();
+            
+            
 
             // Check if any rows were affected (record deleted)
             if ($stmt->rowCount() > 0) {
