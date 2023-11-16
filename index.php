@@ -1,3 +1,5 @@
+<!-- php -S 127.0.0.1:8000  -->
+
 <?php
 include_once("db.php");
 include_once("student.php");
