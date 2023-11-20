@@ -48,7 +48,7 @@ $student = new Student($db);
                 <td><?php echo $result['first_name']; ?></td>
                 <td><?php echo $result['middle_name']; ?></td>
                 <td><?php echo $result['last_name']; ?></td>
-                <td><?php echo $result['gender']; ?></td>
+                <td><?php echo ($result['gender'] == 1) ? 'M' : 'F'; ?></td>
                 <td><?php echo $result['birthday']; ?></td>
                 <td>
                     <a href="student_edit.php?id=<?php echo $result['id']; ?>">Edit</a>

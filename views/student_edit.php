@@ -71,11 +71,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="last_name">Last Name:</label>
         <input type="text" name="last_name" id="last_name" value="<?php echo $studentData['last_name']; ?>">
         
+        <!-- <label for="gender">Gender:</label>
+        <input type="text" name="gender" id="gender" value="<?php // echo $studentData['gender']; ?>"> -->
+        
         <label for="gender">Gender:</label>
-        <input type="text" name="gender" id="gender" value="<?php echo $studentData['gender']; ?>">
+        <select name="gender" id="gender">
+            <option value="0" <?php echo ($studentData['gender'] == 0) ? 'selected' : '';?>>Female</option>
+            <option value="1" <?php echo ($studentData['gender'] == 1) ? 'selected' : '';?>>Male</option>
+        </select>
         
         <label for="birthday">Birthdate:</label>
-        <input type="text" name="birthday" id="birthday" value="<?php echo $studentData['birthday']; ?>">
+        <input type="date" name="birthday" id="birthday" value="<?php echo $studentData['birthday']; ?>">
         
         <input type="submit" value="Update">
     </form>
