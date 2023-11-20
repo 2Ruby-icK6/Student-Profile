@@ -11,8 +11,8 @@ student_details -> id (PK, AI), student_id (int), contact_number, street, town_c
 
 To Dos:
 
-- CRUD of Province
-- CRUD of Town City
+- --CRUD of Province--
+- --CRUD of Town City--
 - Fix Edit of Student's Profile include table student_details
 - Fix Edit of Student's Profile use appropriate controls for gender and birthdate.
 - Modify display in students table include some data from student_details table
