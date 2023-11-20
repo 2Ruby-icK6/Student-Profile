@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="gender">Gender:</label>
         <select name="gender" id="gender" required>
+            <option value="selected">Select...</option>
             <option value="0">Male</option>
             <option value="1">Female</option>
         </select>
@@ -100,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="town_city">Town / City:</label>
         <select name="town_city" id="town_city" required>
+            <option value="selected">Select...</option>
         <?php
 
             $database = new Database();
@@ -115,6 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="province">Province:</label>
         <select name="province" id="province" required>
+            <option value="selected">Select...</option>
         <?php
 
             $database = new Database();
