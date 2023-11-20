@@ -26,6 +26,7 @@ $town_city = new TownCity($db);
         <thead>
             <tr>
                 <th>Town City</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>

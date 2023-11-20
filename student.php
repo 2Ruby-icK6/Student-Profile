@@ -111,7 +111,7 @@ class Student {
     public function displayAll(){
         try {
             // $sql = "SELECT * FROM students LIMIT 10"; // Modify the table name to match your database
-            $sql = "SELECT students.student_number, students.first_name,
+            $sql = "SELECT students.id, students.student_number, students.first_name,
             students.last_name, students.middle_name, students.gender, students.birthday,
             student_details.contact_number, town_city.name as town_city, province.name as province, student_details.zip_code 
             FROM school_db.students
