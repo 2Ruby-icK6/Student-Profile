@@ -112,7 +112,7 @@ class Student {
         try {
             // $sql = "SELECT * FROM students LIMIT 10"; // Modify the table name to match your database
             $sql = "SELECT students.id, students.student_number, students.first_name,
-            students.last_name, students.middle_name, students.gender, students.birthday,
+            students.last_name, students.middle_name, students.gender, DATE_FORMAT(students.birthday, '%b %e %Y') as birthday,
             student_details.contact_number, town_city.name as town_city, province.name as province, student_details.zip_code 
             FROM school_db.students
             INNER JOIN school_db.student_details ON students.id = student_details.student_id
