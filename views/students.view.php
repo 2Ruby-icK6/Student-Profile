@@ -31,6 +31,10 @@ $student = new Student($db);
                 <th>Last Name</th>
                 <th>Gender</th>
                 <th>Birthdate</th>
+                <th>Contact Number</th>
+                <th>Town City</th>
+                <th>Province</th>
+                <th>Zip Code</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -50,6 +54,10 @@ $student = new Student($db);
                 <td><?php echo $result['last_name']; ?></td>
                 <td><?php echo ($result['gender'] == 1) ? 'M' : 'F'; ?></td>
                 <td><?php echo $result['birthday']; ?></td>
+                <td><?php echo $result['contact_number']; ?></td>
+                <td><?php echo $result['town_city']; ?></td>
+                <td><?php echo $result['province']; ?></td>
+                <td><?php echo $result['zip_code']; ?></td>
                 <td>
                     <a href="student_edit.php?id=<?php echo $result['id']; ?>">Edit</a>
                     |
