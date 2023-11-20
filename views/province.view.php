@@ -38,9 +38,9 @@ $province = new Province($db);
             <tr>
                 <td><?php echo $result['name']; ?></td>
                 <td>
-                    <a href="town_edit.php?id=<?php echo $result['id']; ?>">Edit</a>
+                    <a href="province_edit.php?id=<?php echo $result['id']; ?>">Edit</a>
                     |
-                    <a href="town_delete.php?id=<?php echo $result['id']; ?>">Delete</a>
+                    <a href="province_delete.php?id=<?php echo $result['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php } ?>

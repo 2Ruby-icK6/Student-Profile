@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include('../includes/navbar.php'); ?>
 
     <div class="content">
-    <h2>Edit Student Information</h2>
+    <h2>Edit Town City Information</h2>
     <form action="" method="post">
         <input type="hidden" name="id" value="<?php echo $town_data['id']; ?>">
         

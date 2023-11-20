@@ -14,7 +14,7 @@ class Province {
             $stmt = $this->db->getConnection()->prepare($sql);
 
             // Bind values to placeholders
-            $stmt->bindParam(':name', $data['student_number']);
+            $stmt->bindParam(':name', $data['name']);
 
             // Execute the INSERT query
             $stmt->execute();
@@ -66,6 +66,20 @@ class Province {
 
             return $stmt->rowCount() > 0;
         } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            throw $e; // Re-throw the exception for higher-level handling
+        }
+    }
+
+    public function displayAll(){
+        try {
+            $sql = "SELECT * FROM province LIMIT 10"; // Modify the table name to match your database
+            $stmt = $this->db->getConnection()->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            // Handle any potential errors here
             echo "Error: " . $e->getMessage();
             throw $e; // Re-throw the exception for higher-level handling
         }
