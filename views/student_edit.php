@@ -76,8 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <label for="gender">Gender:</label>
         <select name="gender" id="gender">
-            <option value="0" <?php echo ($studentData['gender'] == 0);?>>Female</option>
-            <option value="1" <?php echo ($studentData['gender'] == 1);?>>Male</option>
+            <option value="0" <?php echo ($studentData['gender'] == 0) ? 'selected' : '';?>>Female</option>
+            <option value="1" <?php echo ($studentData['gender'] == 1) ? 'selected' : '';?>>Male</option>
         </select>
         
         <label for="birthday">Birthdate:</label>
