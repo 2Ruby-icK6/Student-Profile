@@ -41,19 +41,19 @@ class StudentDetails {
 
     public function update($id, $data) {
         try {
-            $sql = "UPDATE students_details SET
-                    student_number = :student_number,
+            $sql = "UPDATE student_details SET
+                    student_id = :id,
                     contact_number = :contact_number,
                     street = :street,
                     town_city = :town_city,
                     province = :province,
                     zip_code = :zip_code
-                    WHERE id = :id";
+                    WHERE student_id = :id";
 
             $stmt = $this->db->getConnection()->prepare($sql);
             // Bind parameters
             $stmt->bindValue(':id', $data['id']);
-            $stmt->bindValue(':student_number', $data['student_number']);
+            $stmt->bindValue(':student_id', $data['student_id']);
             $stmt->bindValue(':contact_number', $data['contact_number']);
             $stmt->bindValue(':street', $data['street']);
             $stmt->bindValue(':town_city', $data['town_city']);
@@ -87,7 +87,24 @@ class StudentDetails {
             throw $e; // Re-throw the exception for higher-level handling
         }
     }
+    public function read($id) {
+        try {
+            $connection = $this->db->getConnection();
 
+            $sql = "SELECT * FROM student_details WHERE student_id = :id";
+            $stmt = $connection->prepare($sql);
+            $stmt->bindValue(':id', $id);
+            $stmt->execute();
+
+            // Fetch the student data as an associative array
+            $studentData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $studentData;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            throw $e; // Re-throw the exception for higher-level handling
+        }
+    }
 }
 
 ?>
