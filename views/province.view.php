@@ -26,6 +26,7 @@ $province = new Province($db);
         <thead>
             <tr>
                 <th>Province</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
