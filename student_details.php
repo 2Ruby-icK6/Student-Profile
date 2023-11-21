@@ -38,6 +38,56 @@ class StudentDetails {
     }
 
     // Other CRUD methods for student details
+
+    public function update($id, $data) {
+        try {
+            $sql = "UPDATE students_details SET
+                    student_number = :student_number,
+                    contact_number = :contact_number,
+                    street = :street,
+                    town_city = :town_city,
+                    province = :province,
+                    zip_code = :zip_code
+                    WHERE id = :id";
+
+            $stmt = $this->db->getConnection()->prepare($sql);
+            // Bind parameters
+            $stmt->bindValue(':id', $data['id']);
+            $stmt->bindValue(':student_number', $data['student_number']);
+            $stmt->bindValue(':contact_number', $data['contact_number']);
+            $stmt->bindValue(':street', $data['street']);
+            $stmt->bindValue(':town_city', $data['town_city']);
+            $stmt->bindValue(':province', $data['province']);
+            $stmt->bindValue(':zip_code', $data['zip_code']);
+
+            // Execute the query
+            $stmt->execute();
+
+            return $stmt->rowCount() > 0;
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            throw $e; // Re-throw the exception for higher-level handling
+        }
+    }
+    public function delete($id) {
+        try {
+            $sql = "DELETE FROM student_details WHERE id = :id";
+            $stmt = $this->db->getConnection()->prepare($sql);
+            $stmt->bindValue(':id', $id);
+            $stmt->execute();
+
+            // Check if any rows were affected (record deleted)
+            if ($stmt->rowCount() > 0) {
+                return true; // Record deleted successfully
+            } else {
+                return false; // No records were deleted (student_id not found)
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            throw $e; // Re-throw the exception for higher-level handling
+        }
+    }
+
 }
 
 ?>
