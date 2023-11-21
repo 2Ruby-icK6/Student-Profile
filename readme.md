@@ -13,12 +13,12 @@ To Dos:
 
 - ~~CRUD of Province~~
 - ~~CRUD of Town City~~
-- Fix Edit of Student's Profile include table student_details
+- ~~Fix Edit of Student's Profile include table student_details~~
 - ~~Fix Edit of Student's Profile use appropriate controls for gender and birthdate.~~
 - ~~Modify display in students table include some data from student_details table~~
 - ~~Fix Gender display use 'F' or 'M' (do not change database structure)~~
 - ~~Fix Birthdate display use 'Jan 1 2020' format.~~
-- Fix Delete of Student's Profile include student_details.
+- ~~Fix Delete of Student's Profile include student_details.~~
 <!--
 After the Code Session 2
 Using the skills you've learned from IM and DB2 create reports for this project
