@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db = new Database();
     $student = new Student($db);
     $student_id = $student->update($id, $data);
-    if (true){
+    if ($student_id){
 
         $studentDetailsData = [
             'id' => $_POST['det_id'],
@@ -51,13 +51,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'zip_code' => $_POST['zip_code'],
         ];
         $studentDetails = new StudentDetails($db);
-
-        if ($studentDetails->update($id, $studentDetailsData)) {
+        $details = $studentDetails->update($id, $studentDetailsData);
+        if ($details) {
             echo "Record inserted successfully.";
         } else {
             echo "Failed to insert the record.";
         }
     }
+    else{
+        var_dump($student_id);
+    }
+
 
     // Call the edit method to update the student data
 }

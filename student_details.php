@@ -42,18 +42,16 @@ class StudentDetails {
     public function update($id, $data) {
         try {
             $sql = "UPDATE student_details SET
-                    student_id = :id,
                     contact_number = :contact_number,
                     street = :street,
                     town_city = :town_city,
                     province = :province,
                     zip_code = :zip_code
-                    WHERE student_id = :id";
+                    WHERE id = :id";
 
             $stmt = $this->db->getConnection()->prepare($sql);
             // Bind parameters
             $stmt->bindValue(':id', $data['id']);
-            $stmt->bindValue(':student_id', $data['student_id']);
             $stmt->bindValue(':contact_number', $data['contact_number']);
             $stmt->bindValue(':street', $data['street']);
             $stmt->bindValue(':town_city', $data['town_city']);
