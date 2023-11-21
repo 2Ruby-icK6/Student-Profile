@@ -69,7 +69,7 @@ class StudentDetails {
     }
     public function delete($id) {
         try {
-            $sql = "DELETE FROM student_details WHERE id = :id";
+            $sql = "DELETE FROM student_details WHERE student_id = :id";
             $stmt = $this->db->getConnection()->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();
