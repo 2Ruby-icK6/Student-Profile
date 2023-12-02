@@ -2,8 +2,8 @@
     position: fixed;
     width: 190px;
     height: 100%;
-    background-color: #D8F3DC; /* Background color using the provided hex code */
-    color: #74C69D; /* Text color using the provided hex code */
+    background-color: #7B66FF; /* Background color using the provided hex code */
+    color: #A6CF98; /* Text color using the provided hex code */
     padding: 20px;
 }
 
@@ -23,7 +23,7 @@
 
 .sidebar a {
     text-decoration: none;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #F2FFE9; /* Text color using the provided hex code */
     font-size: 18px;
 }
 
@@ -34,13 +34,13 @@
 
 /* Highlight the selected menu item */
 .sidebar a:hover {
-    color: #B7E4C7; /* Hover color using the provided hex code */
+    color: #96EFFF; /* Hover color using the provided hex code */
 }
 
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #95D5B2; /* Background color using the provided hex code */
+    background-color: #5FBDFF; /* Background color using the provided hex code */
     color: #333; /* Text color */
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@ body {
 
 /* Header */
 h1 {
-    color: #74C69D; /* Header color using the provided hex code */
+    color: #000000; /* Header color using the provided hex code */
 }
 
 /* Existing CSS remains the same */
@@ -61,20 +61,22 @@ h1 {
 
 .dropdown .dropbtn {
     text-decoration: none;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #C5FFF8; /* Text color using the provided hex code */
     font-size: 18px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #D8F3DC; /* Background color for the dropdown using the provided hex code */
+    background-color: #5FBDFF; /* Background color for the dropdown using the provided hex code */
+    text-align: center;
     min-width: 160px;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #7B66FF; /* Text color using the provided hex code */
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -89,8 +91,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #D8F3DC; /* Table background color using the provided hex code */
-    border: 1px solid #95D5B2; /* Table border color using the provided hex code */
+    background-color: #96EFFF; /* Table background color using the provided hex code */
+    border: 1px solid #5FBDFF; /* Table border color using the provided hex code */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,28 +100,28 @@ th, td {
     font-size: small;
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #95D5B2; /* Table border color using the provided hex code */
+    border-bottom: 1px solid #7B66FF; /* Table border color using the provided hex code */
 }
 
 th {
-    background-color: #B7E4C7; /* Header color using the provided hex code */
+    background-color: #7B66FF; /* Header color using the provided hex code */
 }
 
 /* Forms */
 form {
-    background-color: #D8F3DC; /* Form background color using the provided hex code */
-    border: 1px solid #95D5B2; /* Form border color using the provided hex code */
+    background-color: #96EFFF; /* Form background color using the provided hex code */
+    border: 1px solid #000000; /* Form border color using the provided hex code */
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 500px;
 }
 
 .centered-form {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* 100% of the viewport height */
+    height: 100%; /* 100% of the viewport height */
 }
 
 .centered-form label {
@@ -129,7 +131,7 @@ form {
 label {
     display: block;
     margin-bottom: 10px;
-    color: #74C69D; /* Text color using the provided hex code */
+    color: #4e34fb; /* Text color using the provided hex code */
 }
 
 input[type="text"],
@@ -138,13 +140,13 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #74C69D; /* Form border color using the provided hex code */
+    border: 1px solid #000000; /* Form border color using the provided hex code */
     border-radius: 5px;
 }
 
 input[type="submit"] {
-    background-color: #74C69D; /* Submit button color using the provided hex code */
-    color: #D8F3DC; /* Text color using the provided hex code */
+    background-color: #7B66FF; /* Submit button color using the provided hex code */
+    color: #C5FFF8; /* Text color using the provided hex code */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -152,12 +154,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #3DAC78; /* Slightly darker hover color using the provided hex code */
+    background-color: #5FBDFF; /* Slightly darker hover color using the provided hex code */
+    color: #C5FFF8;
 }
 
 /* Header */
 header {
-    background-color: #D8F3DC;
+    background-color: #7B66FF;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -183,8 +186,8 @@ header {
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #74C69D; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #7B66FF; /* Button background color */
+    color: #96EFFF; /* Button text color */
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -193,13 +196,14 @@ header {
 }
 
 .button-link:hover {
-    background-color: #3DAC78; /* Button background color on hover */
+    background-color: #96EFFF; /* Button background color on hover */
+    color: #7B66FF;
 }
 
 /* Footer */
 footer {
-    background-color: #D8F3DC;
-    color: #fff;
+    background-color: #7B66FF;
+    color: #666666;
     padding: 20px 0;
     text-align: center;
 }
@@ -227,5 +231,5 @@ footer {
 
 /* Change font color for links on hover */
 .footer-links a:hover {
-    color: #74C69D;
+    color: #5FBDFF;
 }
