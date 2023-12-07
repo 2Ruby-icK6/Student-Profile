@@ -51,6 +51,10 @@ h1 {
     color: #000000; /* Header color using the provided hex code */
 }
 
+h4 {
+    color: #000000; /* Header color using the provided hex code */
+}
+
 /* Existing CSS remains the same */
 
 /* Style for the dropdown menu */
@@ -232,4 +236,14 @@ footer {
 /* Change font color for links on hover */
 .footer-links a:hover {
     color: #5FBDFF;
+}
+
+.graph {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 25px;
+    margin-left: 250px;
+    background-color: #96EFFF;
+    border: 1px solid #5FBDFF; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
