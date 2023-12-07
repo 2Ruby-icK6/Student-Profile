@@ -32,6 +32,12 @@
     padding: 50px;
 }
 
+#content {
+    margin-left: 230px; /* Adjust to match the sidebar width */
+    padding: 175px;
+    text-align: center;
+}
+
 /* Highlight the selected menu item */
 .sidebar a:hover {
     color: #96EFFF; /* Hover color using the provided hex code */

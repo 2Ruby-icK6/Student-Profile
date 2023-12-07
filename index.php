@@ -23,8 +23,11 @@ $student = new Student($db);
     <?php include('includes/navbar.php'); ?>
 
 
-<div class="content">
-</div>
+    <div class="content" id="content">
+        <h1>Welocome to Student Profile</h1>
+        <h3>Rovick Anthony Pasamonte</h3>
+        <h3>Jolfi Asaph Delcoro</h3>
+    </div>
 
         <!-- Include the footer -->
     <?php include('templates/footer.html'); ?>
